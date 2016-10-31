@@ -1,0 +1,3 @@
+<antlib xmlns:vcsversion="ant:com.mebigfatguy.stringliterals">
+   <taskdef name="stringliterals" classname="com.mebigfatguy.stringliterals.StringLiteralsTask"/>
+</antlib>
