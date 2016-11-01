@@ -34,8 +34,8 @@ public class StringLiteralsTask extends Task {
 
     private Path path;
 
-    public void setClassPath(Path classPath) {
-        path = classPath;
+    public void addConfiguredClasspath(final Path classpath) {
+        path = classpath;
     }
 
     @Override

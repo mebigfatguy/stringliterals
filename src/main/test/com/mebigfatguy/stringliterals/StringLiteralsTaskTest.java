@@ -53,7 +53,7 @@ public class StringLiteralsTaskTest {
         });
 
         classPath.addFileset(fs);
-        task.setClassPath(classPath);
+        task.addConfiguredClasspath(classPath);
 
         final List<String> messages = new ArrayList<>();
 
@@ -94,7 +94,7 @@ public class StringLiteralsTaskTest {
         task.execute();
 
         Assert.assertEquals(21, messages.size());
-        Assert.assertTrue(messages.contains("\".class\" in com.mebigfatguy.stringliterals.StringLiteralTask.execute()V"));
+        Assert.assertTrue(messages.contains("\".class\" in com.mebigfatguy.stringliterals.StringLiteralsTask.execute()V"));
 
     }
 }
