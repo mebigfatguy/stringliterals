@@ -42,7 +42,7 @@ public class StringLiteralsTask extends Task {
     public void execute() {
 
         if (path == null) {
-            throw new BuildException("Property 'path' not set");
+            throw new BuildException("No sub <classpath> element was found");
         }
 
         try {
