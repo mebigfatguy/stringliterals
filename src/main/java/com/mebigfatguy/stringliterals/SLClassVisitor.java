@@ -32,7 +32,13 @@ public class SLClassVisitor extends ClassVisitor {
     }
 
     @Override
+    public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
+        visitor.setClassName(name.replace('/', '.'));
+    }
+
+    @Override
     public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
+        visitor.setMethodDetails(name + desc);
         return visitor;
     }
 

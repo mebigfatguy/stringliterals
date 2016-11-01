@@ -26,6 +26,8 @@ import org.objectweb.asm.Opcodes;
 public class SLMethodVisitor extends MethodVisitor {
 
     private List<String> literals = new ArrayList<>();
+    private String className;
+    private String methodInfo;
 
     public SLMethodVisitor() {
         super(Opcodes.ASM5);
@@ -34,8 +36,17 @@ public class SLMethodVisitor extends MethodVisitor {
     @Override
     public void visitLdcInsn(Object cst) {
         if (cst instanceof String) {
-            literals.add((String) cst);
+            literals.add("\"" + ((String) cst) + "\" in " + className + "." + methodInfo);
         }
+    }
+
+    public void setClassName(String name) {
+        className = name;
+
+    }
+
+    public void setMethodDetails(String details) {
+        methodInfo = details;
     }
 
     public List<String> getLiterals() {
