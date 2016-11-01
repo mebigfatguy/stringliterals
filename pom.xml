@@ -160,6 +160,12 @@
 					</execution>
 				</executions>
 				<configuration>
+					<artifactSet>
+		                <excludes>
+		                  <exclude>org.apache.ant:*</exclude>
+		                  <exclude>junit:*</exclude>
+		                </excludes>
+	                </artifactSet>
 					<relocations>
 						<relocation>
 							<pattern>org.objectweb.asm</pattern>
