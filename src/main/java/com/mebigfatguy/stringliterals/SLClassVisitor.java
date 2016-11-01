@@ -17,7 +17,7 @@
  */
 package com.mebigfatguy.stringliterals;
 
-import java.util.List;
+import java.util.Set;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -42,7 +42,7 @@ public class SLClassVisitor extends ClassVisitor {
         return visitor;
     }
 
-    public List<String> getLiterals() {
+    public Set<String> getLiterals() {
         return visitor.getLiterals();
     }
 }

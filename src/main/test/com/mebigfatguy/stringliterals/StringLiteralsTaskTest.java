@@ -93,7 +93,7 @@ public class StringLiteralsTaskTest {
 
         task.execute();
 
-        Assert.assertEquals(21, messages.size());
+        Assert.assertEquals(19, messages.size());
         Assert.assertTrue(messages.contains("\".class\" in com.mebigfatguy.stringliterals.StringLiteralsTask.execute()V"));
 
     }

@@ -20,6 +20,7 @@ package com.mebigfatguy.stringliterals;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -58,7 +59,7 @@ public class StringLiteralsTask extends Task {
                 }
             }
 
-            List<String> literals = visitor.getLiterals();
+            List<String> literals = new ArrayList<>(visitor.getLiterals());
             Collections.sort(literals);
 
             Project project = getProject();

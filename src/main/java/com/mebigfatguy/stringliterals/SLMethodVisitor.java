@@ -17,15 +17,15 @@
  */
 package com.mebigfatguy.stringliterals;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
 public class SLMethodVisitor extends MethodVisitor {
 
-    private List<String> literals = new ArrayList<>();
+    private Set<String> literals = new HashSet<>();
     private String className;
     private String methodInfo;
 
@@ -49,7 +49,7 @@ public class SLMethodVisitor extends MethodVisitor {
         methodInfo = details;
     }
 
-    public List<String> getLiterals() {
+    public Set<String> getLiterals() {
         return literals;
     }
 }
