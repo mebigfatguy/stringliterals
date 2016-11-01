@@ -38,7 +38,6 @@ public class SLClassVisitor extends ClassVisitor {
 
     @Override
     public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
-        visitor.setMethodDetails(name + desc);
         return visitor;
     }
 

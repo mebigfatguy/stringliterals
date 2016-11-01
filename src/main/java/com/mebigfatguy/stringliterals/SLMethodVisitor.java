@@ -36,7 +36,7 @@ public class SLMethodVisitor extends MethodVisitor {
     @Override
     public void visitLdcInsn(Object cst) {
         if (cst instanceof String) {
-            literals.add("\"" + ((String) cst) + "\" in " + className + "." + methodInfo);
+            literals.add("\"" + ((String) cst) + "\" in " + className);
         }
     }
 
