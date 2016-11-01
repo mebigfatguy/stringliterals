@@ -59,12 +59,12 @@ public class StringLiteralsTask extends Task {
                 }
             }
 
-            List<String> literals = new ArrayList<>(visitor.getLiterals());
+            List<Literal> literals = new ArrayList<>(visitor.getLiterals());
             Collections.sort(literals);
 
             Project project = getProject();
-            for (String literal : literals) {
-                project.log(literal, Project.MSG_ERR);
+            for (Literal literal : literals) {
+                project.log(literal.toString(), Project.MSG_ERR);
             }
 
         } catch (IOException e) {

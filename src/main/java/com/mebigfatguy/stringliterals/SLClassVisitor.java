@@ -41,7 +41,7 @@ public class SLClassVisitor extends ClassVisitor {
         return visitor;
     }
 
-    public Set<String> getLiterals() {
+    public Set<Literal> getLiterals() {
         return visitor.getLiterals();
     }
 }
