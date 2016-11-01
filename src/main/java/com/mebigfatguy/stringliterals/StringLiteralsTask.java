@@ -30,7 +30,7 @@ import org.apache.tools.ant.types.Path;
 import org.apache.tools.ant.types.Resource;
 import org.objectweb.asm.ClassReader;
 
-public class StringLiteralTask extends Task {
+public class StringLiteralsTask extends Task {
 
     private Path path;
 

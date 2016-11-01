@@ -22,7 +22,7 @@ public class StringLiteralsTaskTest {
         String[] someStrings = { "Fee", "Fi", "Fo", "Fum" };
 
         Project p = new Project();
-        StringLiteralTask task = new StringLiteralTask();
+        StringLiteralsTask task = new StringLiteralsTask();
         task.setProject(p);
 
         Path classPath = new Path(p);
