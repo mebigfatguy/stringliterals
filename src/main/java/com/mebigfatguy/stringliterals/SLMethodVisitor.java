@@ -17,26 +17,21 @@
  */
 package com.mebigfatguy.stringliterals;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-public class SLClassVisitor extends ClassVisitor {
+public class SLMethodVisitor extends MethodVisitor {
 
-    private SLMethodVisitor visitor = new SLMethodVisitor();
+    private List<String> literals = new ArrayList<>();
 
-    public SLClassVisitor() {
+    public SLMethodVisitor() {
         super(Opcodes.ASM5);
     }
 
-    @Override
-    public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
-        return visitor;
-    }
-
     public List<String> getLiterals() {
-        return visitor.getLiterals();
+        return literals;
     }
 }
