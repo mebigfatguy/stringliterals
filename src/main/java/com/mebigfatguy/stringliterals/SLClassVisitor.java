@@ -1,5 +1,5 @@
 /*
- * strihgliterals - A tool for parsing out all string literals used in a code base
+ * stringliterals - A tool for parsing out all string literals used in a code base
  * Copyright 2016-2016 MeBigFatGuy.com
  * Copyright 2016-2016 Dave Brosius
  *
