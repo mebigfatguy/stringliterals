@@ -31,6 +31,13 @@ public class SLMethodVisitor extends MethodVisitor {
         super(Opcodes.ASM5);
     }
 
+    @Override
+    public void visitLdcInsn(Object cst) {
+        if (cst instanceof String) {
+            literals.add((String) cst);
+        }
+    }
+
     public List<String> getLiterals() {
         return literals;
     }
