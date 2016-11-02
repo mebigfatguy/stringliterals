@@ -80,8 +80,7 @@
 					<configuration>
 						<archive>
 							<manifestEntries>
-								<git-revision>${scmBranch} ${buildNumber}
-									${maven.build.timestamp}</git-revision>
+								<git-revision>${scmBranch} ${buildNumber}</git-revision>
 								<Bundle-ManifestVersion>2</Bundle-ManifestVersion>
 								<Bundle-Name>stringliterals</Bundle-Name>
 								<Bundle-SymbolicName>stringliterals; singleton:=true</Bundle-SymbolicName>
