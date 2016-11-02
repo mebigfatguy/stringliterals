@@ -46,13 +46,18 @@ public class StringLiteralsTask extends Task {
             throw new BuildException("No sub <classpath> element was found");
         }
 
+        Project project = getProject();
+        project.log("Path is " + path, Project.MSG_VERBOSE);
+
         try {
 
+            project.log("Scanning classes...", Project.MSG_VERBOSE);
             SLClassVisitor visitor = new SLClassVisitor();
             for (Resource resource : path) {
                 if (!resource.isDirectory() && resource.getName().endsWith(".class")) {
 
                     try (InputStream is = new BufferedInputStream(resource.getInputStream())) {
+                        project.log("Parsing " + resource.getName(), Project.MSG_DEBUG);
                         ClassReader reader = new ClassReader(is);
                         reader.accept(visitor, ClassReader.SKIP_DEBUG);
                     }
@@ -60,9 +65,9 @@ public class StringLiteralsTask extends Task {
             }
 
             List<Literal> literals = new ArrayList<>(visitor.getLiterals());
+            project.log(String.format("Sorting classes [%d]...", literals.size()), Project.MSG_VERBOSE);
             Collections.sort(literals);
 
-            Project project = getProject();
             for (Literal literal : literals) {
                 project.log(literal.toString(), Project.MSG_ERR);
             }
