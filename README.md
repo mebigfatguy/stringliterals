@@ -20,5 +20,5 @@ Add an ant task such as
   Available on maven central with coordinates
   
       groupId: com.mebigfatguy.stringliterals
-   artifactId: stringliterals
+      artifactId: stringliterals
       version: 0.2.0
