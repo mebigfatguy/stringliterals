@@ -28,7 +28,7 @@ public class SLClassVisitor extends ClassVisitor {
     private SLMethodVisitor visitor = new SLMethodVisitor();
 
     public SLClassVisitor() {
-        super(Opcodes.ASM5);
+        super(Opcodes.ASM9);
     }
 
     @Override

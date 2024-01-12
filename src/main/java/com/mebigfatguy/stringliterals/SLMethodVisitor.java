@@ -30,7 +30,7 @@ public class SLMethodVisitor extends MethodVisitor {
     private String methodInfo;
 
     public SLMethodVisitor() {
-        super(Opcodes.ASM5);
+        super(Opcodes.ASM9);
     }
 
     @Override
